@@ -15,10 +15,23 @@ const images = [
 
 const list = document.querySelector('.gallery')
 
-for (let i = 0; i < images.length; i++) {
+for (let i = 0; i < images.length; i += 1) {
+
+	
+	const li = document.createElement('li')
 	const image = document.createElement('img')
 	image.src = images[i].url
 	image.alt = images[i].alt
-	list.append(image)
-  image.classList.add('gallery__item')
+	list.append(li)
+	li.append(image)
+    image.classList.add('gallery__item')
 }
+
+
+// for (let i = 0; i < images.length; i += 1) {
+// 	const image = document.createElement('img')
+// 	image.src = images[i].url
+// 	image.alt = images[i].alt
+// 	list.append(image)
+//   image.classList.add('gallery__item')
+// }
